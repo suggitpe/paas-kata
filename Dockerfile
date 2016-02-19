@@ -4,5 +4,5 @@ VOLUME /target
 ENV JAVA_OPTS -Dspring.profiles.active=docker
 ADD build/libs/simple-java-service-0.0.1.jar app.jar
 RUN bash -c 'touch /app.jar'
-EXPOSE 8901
+EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/app.jar"]
